@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos</title>
+
+    <style>
+      #body {
+      }
+
+      #titulo {
+        background-color: rgb(69, 1, 1);
+        color: rgb(7, 156, 249);
+        text-align: center;
+        margin-top: 70px;
+
+        border-radius: 65px;
+      }
+
+      container {
+        background-color: black;
+      }
+
+      script {
+        background-color: blueviolet;
+        margin: 10px;
+        padding-top: 10px 10px;
+      }
+    </style>
+    <div>
+      <script class="container">
+        function loaded() {
+          let t = document.getElementById("titulo");
+
+          //t.onclick = mudarText;
+
+          t.addEventListener("mouseover", mudarText);
+          t.addEventListener("mouseover", mudarText);
+          t.addEventListener("mouseout", mouseout);
+        }
+
+        function mudarText() {
+          this.innerHTML = "Estou Feliz";
+        }
+
+        function mudarText() {
+          this.innerHTML = "Hoje e dia de aprender";
+        }
+
+        function mouseout() {
+          this.innerHTML = "Não vamos parar";
+        }
+      </script>
+    </div>
+  </head>
+
+  <body onload="loaded()">
+    <div><h1 id="titulo">Eventos</h1></div>
+  </body>
+</html>
